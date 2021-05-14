@@ -15,6 +15,7 @@
 		F6D53CDB264E3E6D00E16DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D53CD9264E3E6D00E16DC5 /* LaunchScreen.storyboard */; };
 		F6D53CE6264E3E6D00E16DC5 /* CalculatorProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D53CE5264E3E6D00E16DC5 /* CalculatorProjectTests.swift */; };
 		F6D53CF1264E3E6D00E16DC5 /* CalculatorProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D53CF0264E3E6D00E16DC5 /* CalculatorProjectUITests.swift */; };
+		F6D53D05264EAA7C00E16DC5 /* CalcMainBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D53D04264EAA7C00E16DC5 /* CalcMainBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F6D53CEC264E3E6D00E16DC5 /* CalculatorProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D53CF0264E3E6D00E16DC5 /* CalculatorProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorProjectUITests.swift; sourceTree = "<group>"; };
 		F6D53CF2264E3E6D00E16DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D53D04264EAA7C00E16DC5 /* CalcMainBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcMainBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,11 @@
 		F6D53CCD264E3E6C00E16DC5 /* CalculatorProject */ = {
 			isa = PBXGroup;
 			children = (
+				F6D53D03264EAA2400E16DC5 /* Model */,
+				F6D53D02264EAA1B00E16DC5 /* View */,
+				F6D53D01264EAA0F00E16DC5 /* Controller */,
 				F6D53CCE264E3E6C00E16DC5 /* AppDelegate.swift */,
 				F6D53CD0264E3E6C00E16DC5 /* SceneDelegate.swift */,
-				F6D53CD2264E3E6C00E16DC5 /* ViewController.swift */,
 				F6D53CD4264E3E6C00E16DC5 /* Main.storyboard */,
 				F6D53CD7264E3E6D00E16DC5 /* Assets.xcassets */,
 				F6D53CD9264E3E6D00E16DC5 /* LaunchScreen.storyboard */,
@@ -126,6 +130,29 @@
 				F6D53CF2264E3E6D00E16DC5 /* Info.plist */,
 			);
 			path = CalculatorProjectUITests;
+			sourceTree = "<group>";
+		};
+		F6D53D01264EAA0F00E16DC5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6D53CD2264E3E6C00E16DC5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6D53D02264EAA1B00E16DC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6D53D04264EAA7C00E16DC5 /* CalcMainBackground.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6D53D03264EAA2400E16DC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +288,7 @@
 				F6D53CD3264E3E6C00E16DC5 /* ViewController.swift in Sources */,
 				F6D53CCF264E3E6C00E16DC5 /* AppDelegate.swift in Sources */,
 				F6D53CD1264E3E6C00E16DC5 /* SceneDelegate.swift in Sources */,
+				F6D53D05264EAA7C00E16DC5 /* CalcMainBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
