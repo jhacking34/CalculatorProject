@@ -15,7 +15,9 @@
 		F6D53CDB264E3E6D00E16DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D53CD9264E3E6D00E16DC5 /* LaunchScreen.storyboard */; };
 		F6D53CE6264E3E6D00E16DC5 /* CalculatorProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D53CE5264E3E6D00E16DC5 /* CalculatorProjectTests.swift */; };
 		F6D53CF1264E3E6D00E16DC5 /* CalculatorProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D53CF0264E3E6D00E16DC5 /* CalculatorProjectUITests.swift */; };
-		F6D53D05264EAA7C00E16DC5 /* CalcMainBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D53D04264EAA7C00E16DC5 /* CalcMainBackground.swift */; };
+		F6D53D05264EAA7C00E16DC5 /* CPCalcMainBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D53D04264EAA7C00E16DC5 /* CPCalcMainBackground.swift */; };
+		F6E1B3EC26515C2800968E63 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1B3EB26515C2800968E63 /* CPButton.swift */; };
+		F6E1B3F926516AA400968E63 /* CPResultsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1B3F826516AA400968E63 /* CPResultsLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		F6D53CEC264E3E6D00E16DC5 /* CalculatorProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D53CF0264E3E6D00E16DC5 /* CalculatorProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorProjectUITests.swift; sourceTree = "<group>"; };
 		F6D53CF2264E3E6D00E16DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6D53D04264EAA7C00E16DC5 /* CalcMainBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcMainBackground.swift; sourceTree = "<group>"; };
+		F6D53D04264EAA7C00E16DC5 /* CPCalcMainBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPCalcMainBackground.swift; sourceTree = "<group>"; };
+		F6E1B3EB26515C2800968E63 /* CPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
+		F6E1B3F826516AA400968E63 /* CPResultsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPResultsLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +147,9 @@
 		F6D53D02264EAA1B00E16DC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F6D53D04264EAA7C00E16DC5 /* CalcMainBackground.swift */,
+				F6D53D04264EAA7C00E16DC5 /* CPCalcMainBackground.swift */,
+				F6E1B3EB26515C2800968E63 /* CPButton.swift */,
+				F6E1B3F826516AA400968E63 /* CPResultsLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,10 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E1B3F926516AA400968E63 /* CPResultsLabel.swift in Sources */,
 				F6D53CD3264E3E6C00E16DC5 /* ViewController.swift in Sources */,
 				F6D53CCF264E3E6C00E16DC5 /* AppDelegate.swift in Sources */,
 				F6D53CD1264E3E6C00E16DC5 /* SceneDelegate.swift in Sources */,
-				F6D53D05264EAA7C00E16DC5 /* CalcMainBackground.swift in Sources */,
+				F6E1B3EC26515C2800968E63 /* CPButton.swift in Sources */,
+				F6D53D05264EAA7C00E16DC5 /* CPCalcMainBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

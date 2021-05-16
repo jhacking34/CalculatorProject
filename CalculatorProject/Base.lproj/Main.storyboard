@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-rS-TXT" customClass="CalcMainBackground" customModule="CalculatorProject" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-rS-TXT" customClass="CPCalcMainBackground" customModule="CalculatorProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="144" width="390" height="561"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q6r-pl-CmE">
@@ -24,21 +25,24 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bdo-ul-N8d">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="100"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqH-ja-Qtg">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqH-ja-Qtg" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="AC"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVV-ZM-EcF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVV-ZM-EcF" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="+/-"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-b0-y4U">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-b0-y4U" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
                                                         <state key="normal" title="%"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljn-s6-Swv">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljn-s6-Swv" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="269.33333333333331" y="0.0" width="84.666666666666686" height="100"/>
-                                                        <state key="normal" image="divide" catalog="system"/>
+                                                        <color key="tintColor" red="0.78866546322601017" green="0.4575255266101757" blue="0.010147218935664079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="divide" catalog="system" symbolScale="large"/>
+                                                        </state>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -48,19 +52,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="018-oU-aBR">
                                                 <rect key="frame" x="0.0" y="105" width="354" height="100"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mF-er-wMc">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mF-er-wMc" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="7"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-9Q-hmG">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-9Q-hmG" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="8"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-ZO-9ju">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-ZO-9ju" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
                                                         <state key="normal" title="9"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-QR-Qo9">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-QR-Qo9" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="269.33333333333331" y="0.0" width="84.666666666666686" height="100"/>
                                                         <state key="normal" title="X"/>
                                                     </button>
@@ -72,19 +76,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-EM-emJ">
                                                 <rect key="frame" x="0.0" y="210" width="354" height="100"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bez-l8-Guq">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bez-l8-Guq" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="4"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBf-Ck-op8">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBf-Ck-op8" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="5"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0Q-BV-e2d">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0Q-BV-e2d" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
                                                         <state key="normal" title="6"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5r-VU-A8w">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5r-VU-A8w" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="269.33333333333331" y="0.0" width="84.666666666666686" height="100"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
@@ -96,19 +100,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-wI-TRd">
                                                 <rect key="frame" x="0.0" y="315" width="354" height="100"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-co-e7j">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-co-e7j" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="1"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jle-pA-QSh">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jle-pA-QSh" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="2"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25o-VO-J0k">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25o-VO-J0k" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
                                                         <state key="normal" title="3"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39p-CR-Lvb">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39p-CR-Lvb" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="269.33333333333331" y="0.0" width="84.666666666666686" height="100"/>
                                                         <state key="normal" title="+"/>
                                                     </button>
@@ -120,7 +124,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="B7l-PH-K8A">
                                                 <rect key="frame" x="0.0" y="420" width="354" height="100"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCF-Ih-iJI">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCF-Ih-iJI" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="T5l-Of-rho"/>
@@ -130,11 +134,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-Gx-Ob8">
                                                         <rect key="frame" x="179.66666666666663" y="0.0" width="174.33333333333337" height="100"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0g-08-wCr">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0g-08-wCr" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                                 <state key="normal" title="."/>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L56-CZ-lHf">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L56-CZ-lHf" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                                 <rect key="frame" x="89.666666666666657" y="0.0" width="84.666666666666657" height="100"/>
                                                                 <state key="normal" title="="/>
                                                             </button>
@@ -170,22 +174,23 @@
                                     <constraint firstItem="q6r-pl-CmE" firstAttribute="leading" secondItem="mQ7-rS-TXT" secondAttribute="leadingMargin" constant="10" id="lQp-Qp-k8w"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Go-7d-Bvg">
-                                <rect key="frame" x="10" y="59" width="370" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcR-l3-nMV" customClass="CPResultsLabel" customModule="CalculatorProject" customModuleProvider="target">
+                                <rect key="frame" x="10" y="59" width="360" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
-                            <constraint firstItem="mQ7-rS-TXT" firstAttribute="top" secondItem="7Go-7d-Bvg" secondAttribute="bottom" constant="5" id="AdX-2g-QXW"/>
-                            <constraint firstItem="7Go-7d-Bvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Hbn-cz-M6b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bcR-l3-nMV" secondAttribute="trailing" constant="20" id="I2y-eB-kYj"/>
                             <constraint firstItem="mQ7-rS-TXT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N2K-b8-tUv"/>
+                            <constraint firstItem="bcR-l3-nMV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="P0m-oh-Np5"/>
                             <constraint firstAttribute="bottom" secondItem="mQ7-rS-TXT" secondAttribute="bottom" id="R5a-45-DV0"/>
                             <constraint firstItem="mQ7-rS-TXT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="j7V-ir-tB6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Go-7d-Bvg" secondAttribute="trailing" constant="10" id="m6z-RJ-S9M"/>
+                            <constraint firstItem="bcR-l3-nMV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nm5-VB-p1c"/>
                             <constraint firstAttribute="trailing" secondItem="mQ7-rS-TXT" secondAttribute="trailing" id="vAP-dZ-9hm"/>
-                            <constraint firstItem="7Go-7d-Bvg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="xKN-Zf-SDg"/>
+                            <constraint firstItem="mQ7-rS-TXT" firstAttribute="top" secondItem="bcR-l3-nMV" secondAttribute="bottom" constant="5" id="z2N-ci-mAC"/>
                         </constraints>
                     </view>
                 </viewController>

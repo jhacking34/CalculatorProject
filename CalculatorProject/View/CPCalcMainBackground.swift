@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalcMainBackground: UIView {
+class CPCalcMainBackground: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
