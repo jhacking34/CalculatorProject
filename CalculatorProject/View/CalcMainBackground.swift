@@ -9,13 +9,13 @@ import UIKit
 
 class CalcMainBackground: UIView {
 
-    
-    override func prepareForInterfaceBuilder() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         customizeView()
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         customizeView()
     }
     
