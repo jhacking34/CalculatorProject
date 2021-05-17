@@ -28,10 +28,16 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqH-ja-Qtg" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="AC"/>
+                                                        <connections>
+                                                            <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BmA-EK-D41"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVV-ZM-EcF" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="+/-"/>
+                                                        <connections>
+                                                            <action selector="plusMinusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6IX-D3-Odf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-b0-y4U" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
@@ -43,6 +49,9 @@
                                                         <state key="normal">
                                                             <imageReference key="image" image="divide" catalog="system" symbolScale="large"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="divisonButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7e-6c-Niv"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -55,18 +64,31 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mF-er-wMc" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="7"/>
+                                                        <connections>
+                                                            <action selector="sevinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01Q-Fr-eOL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-9Q-hmG" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="8"/>
+                                                        <connections>
+                                                            <action selector="eightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQl-0O-qdi"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-ZO-9ju" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
                                                         <state key="normal" title="9"/>
+                                                        <connections>
+                                                            <action selector="nineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frm-3X-xT6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-QR-Qo9" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="269.33333333333331" y="0.0" width="84.666666666666686" height="100"/>
                                                         <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="divisonButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbp-yj-TpM"/>
+                                                            <action selector="multiButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMr-hZ-P4X"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -79,18 +101,30 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bez-l8-Guq" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="4"/>
+                                                        <connections>
+                                                            <action selector="fourButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GyR-Ma-0TU"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBf-Ck-op8" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="5"/>
+                                                        <connections>
+                                                            <action selector="fiveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wW-Xg-wuL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0Q-BV-e2d" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
                                                         <state key="normal" title="6"/>
+                                                        <connections>
+                                                            <action selector="sixButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFm-rd-fjJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5r-VU-A8w" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="269.33333333333331" y="0.0" width="84.666666666666686" height="100"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="minusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZLd-AN-6dF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -103,18 +137,30 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-co-e7j" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                         <state key="normal" title="1"/>
+                                                        <connections>
+                                                            <action selector="oneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y84-1T-nA4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jle-pA-QSh" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="89.666666666666686" y="0.0" width="85" height="100"/>
                                                         <state key="normal" title="2"/>
+                                                        <connections>
+                                                            <action selector="twoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hfl-zB-bJd"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25o-VO-J0k" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="179.66666666666666" y="0.0" width="84.666666666666657" height="100"/>
                                                         <state key="normal" title="3"/>
+                                                        <connections>
+                                                            <action selector="threeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c81-8R-Rgd"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39p-CR-Lvb" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                         <rect key="frame" x="269.33333333333331" y="0.0" width="84.666666666666686" height="100"/>
                                                         <state key="normal" title="+"/>
+                                                        <connections>
+                                                            <action selector="additionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nt3-cf-Ij0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -130,6 +176,9 @@
                                                             <constraint firstAttribute="height" constant="100" id="T5l-Of-rho"/>
                                                         </constraints>
                                                         <state key="normal" title="0"/>
+                                                        <connections>
+                                                            <action selector="zeroButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVO-k6-gQQ"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-Gx-Ob8">
                                                         <rect key="frame" x="179.66666666666663" y="0.0" width="174.33333333333337" height="100"/>
@@ -137,10 +186,16 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0g-08-wCr" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="100"/>
                                                                 <state key="normal" title="."/>
+                                                                <connections>
+                                                                    <action selector="periodButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QhD-Wl-rLV"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L56-CZ-lHf" customClass="CPButton" customModule="CalculatorProject" customModuleProvider="target">
                                                                 <rect key="frame" x="89.666666666666657" y="0.0" width="84.666666666666657" height="100"/>
                                                                 <state key="normal" title="="/>
+                                                                <connections>
+                                                                    <action selector="equalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCS-xa-DOR"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
