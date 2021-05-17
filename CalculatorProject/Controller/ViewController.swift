@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    var result = 0
+    var stringTest = ""
+    //use an array to store all values that will go through to do all the math.
     @IBOutlet weak var resultsLabel: CPResultsLabel!
     
     override func viewDidLoad() {
@@ -24,15 +26,15 @@ extension ViewController{
     @IBAction func numButtonPressed(_ sender: UIButton){
         switch sender.tag {
         case 1:
-            print("1")
+            stringTest.append("1")
         case 2:
-            print("2")
+            stringTest.append("2")
         case 3:
             print("3")
         case 4:
             print("4")
         case 5:
-            print("5")
+            stringTest.append("5")
         case 6:
             print("6")
         case 7:
@@ -58,7 +60,11 @@ extension ViewController{
         case 4:
             print("division")
         default:
-            print("=")
+            print("= was pressed")
+            if let number = Int(stringTest){
+                print(number + 100)
+            }
+            
         }
     }
     
