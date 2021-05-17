@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.4535933514)
         
     }
+}
+extension ViewController{
+    //MARK: - Number Button Pressed
     @IBAction func numButtonPressed(_ sender: UIButton){
         switch sender.tag {
         case 1:
@@ -40,6 +43,37 @@ class ViewController: UIViewController {
             print("9")
         default:
             print("0")
+        }
+    }
+    //MARK: - Operation Button Pressed
+    @IBAction func operationButtonPressed(_ sender: UIButton){
+        // = tag 0, + is tag 1, - is tag 2, X is tag 3, division is tag 4
+        switch sender.tag {
+        case 1:
+            print("+")
+        case 2:
+            print("-")
+        case 3:
+            print("X")
+        case 4:
+            print("division")
+        default:
+            print("=")
+        }
+    }
+    
+    //MARK: - Other Button Pressed
+    @IBAction func otherButtonPressed(_ sender: UIButton){
+        // . is tag 0, % is tag 1, +/- is tag 2, AC is tag 3
+        switch sender.tag {
+        case 1:
+            print("%")
+        case 2:
+            print("+/-")
+        case 3:
+            print("AC")
+        default:
+            print(".")
         }
     }
 
