@@ -25,14 +25,17 @@ class ViewController: UIViewController {
         
         switch button {
         case "AC":
-            buildNumber = ""
+            resetBuildNumber()
+            mathProblem = []
             resultsLabel.text = "0"
         case "+":
-            mathProblem.append(buildNumber)
+            // using if statement to only append values that are not blank or no value.
+            if buildNumber != ""{ mathProblem.append(buildNumber) }
             mathProblem.append("+")
-            updateResults("AC")
+            resetBuildNumber()
         case "=":
             mathProblem.append(buildNumber)
+            resetBuildNumber()
             performCalculation()
         default:
             buildNumber.append(button)
@@ -41,6 +44,8 @@ class ViewController: UIViewController {
     }
     
     func performCalculation() {
+        
+        // need to add error checking if you click number and then = and another number.  also if you click number and then =
         var calOperator : [String] = []
         var numbers : [Int] = []
         for item in mathProblem{
@@ -51,9 +56,19 @@ class ViewController: UIViewController {
                     numbers.append(value)
                 }
             }
+            
+            for i in numbers{
+                
+            }
+            //Need to set build number to calculated value
+            
             print("operator: \(calOperator.count)")
             print("numbers: \(numbers.count)")
         }
+    }
+    
+    func resetBuildNumber(){
+        buildNumber = ""
     }
 }
 extension ViewController{
