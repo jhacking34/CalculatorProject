@@ -21,7 +21,7 @@ class CPResultsLabel: UILabel {
     
     func setUpLabel() {
         textColor = .black
-        font = UIFont(name: "Avenir Book", size: 28)
+        font = UIFont(name: "Avenir Book", size: 48)
         clipsToBounds = true
     }
 

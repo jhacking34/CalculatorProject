@@ -20,11 +20,11 @@ class CPButton: UIButton {
     }
     
     func setupButton() {
-        setTitleColor(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1), for: .normal)
+        setTitleColor(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1), for: .normal)
         backgroundColor  = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         titleLabel?.font = UIFont(name: "Avenir Book", size: 28)
         clipsToBounds = true
-        layer.cornerRadius = 8.0
+        layer.cornerRadius = 28.0
         
     }
 
