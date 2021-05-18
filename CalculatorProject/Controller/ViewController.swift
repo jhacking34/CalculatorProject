@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     var result = 0
-    var stringTest = ""
+    var buildNumber = ""
+    var mathProblem : [String] = []
     //use an array to store all values that will go through to do all the math.
     @IBOutlet weak var resultsLabel: CPResultsLabel!
     
@@ -20,31 +21,65 @@ class ViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.4535933514)
         
     }
+    func updateResults(_ button: String) {
+        
+        switch button {
+        case "AC":
+            buildNumber = ""
+            resultsLabel.text = "0"
+        case "+":
+            mathProblem.append(buildNumber)
+            mathProblem.append("+")
+            updateResults("AC")
+        case "=":
+            mathProblem.append(buildNumber)
+            performCalculation()
+        default:
+            buildNumber.append(button)
+            resultsLabel.text = buildNumber
+        }
+    }
+    
+    func performCalculation() {
+        var calOperator : [String] = []
+        var numbers : [Int] = []
+        for item in mathProblem{
+            if item == "+" {
+                calOperator.append("+")
+            } else {
+                if let value = Int(item){
+                    numbers.append(value)
+                }
+            }
+            print("operator: \(calOperator.count)")
+            print("numbers: \(numbers.count)")
+        }
+    }
 }
 extension ViewController{
     //MARK: - Number Button Pressed
     @IBAction func numButtonPressed(_ sender: UIButton){
         switch sender.tag {
         case 1:
-            stringTest.append("1")
+            updateResults("1")
         case 2:
-            stringTest.append("2")
+            updateResults("2")
         case 3:
-            print("3")
+            updateResults("3")
         case 4:
-            print("4")
+            updateResults("4")
         case 5:
-            stringTest.append("5")
+            updateResults("5")
         case 6:
-            print("6")
+            updateResults("6")
         case 7:
-            print("7")
+            updateResults("7")
         case 8:
-            print("8")
+            updateResults("8")
         case 9:
-            print("9")
+            updateResults("9")
         default:
-            print("0")
+            updateResults("0")
         }
     }
     //MARK: - Operation Button Pressed
@@ -52,7 +87,7 @@ extension ViewController{
         // = tag 0, + is tag 1, - is tag 2, X is tag 3, division is tag 4
         switch sender.tag {
         case 1:
-            print("+")
+            updateResults("+")
         case 2:
             print("-")
         case 3:
@@ -60,10 +95,11 @@ extension ViewController{
         case 4:
             print("division")
         default:
-            print("= was pressed")
-            if let number = Int(stringTest){
-                print(number + 100)
-            }
+            updateResults("=")
+            print(mathProblem)
+//            if let number = Int(buildNumber){
+//                print(number + 100)
+//            }
             
         }
     }
@@ -77,7 +113,7 @@ extension ViewController{
         case 2:
             print("+/-")
         case 3:
-            print("AC")
+            updateResults("AC")
         default:
             print(".")
         }
