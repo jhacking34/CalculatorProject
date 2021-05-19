@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var result = 0
-    var buildNumber = ""
+    var buildNumber = "0"
     var mathProblem : [String] = []
     //use an array to store all values that will go through to do all the math.
     @IBOutlet weak var resultsLabel: CPResultsLabel!
@@ -25,50 +25,85 @@ class ViewController: UIViewController {
         
         switch button {
         case "AC":
-            resetBuildNumber()
+            zeroOutBuildNumber()
             mathProblem = []
+            result = 0
             resultsLabel.text = "0"
         case "+":
-            // using if statement to only append values that are not blank or no value.
-            if buildNumber != ""{ mathProblem.append(buildNumber) }
+            evaluateMath()
             mathProblem.append("+")
+            resetBuildNumber()
+        case "-":
+            evaluateMath()
+            mathProblem.append("-")
+            resetBuildNumber()
+        case "X":
+            evaluateMath()
+            mathProblem.append("X")
+            resetBuildNumber()
+        case "division":
+            evaluateMath()
+            mathProblem.append("division")
             resetBuildNumber()
         case "=":
             mathProblem.append(buildNumber)
             resetBuildNumber()
             performCalculation()
         default:
+            // This will reset the string to blank so if the first number key clicked wont show a (example 03) but just (3) first time app load buildNumber is set to "0" and same with clicking AC
+            if buildNumber == "0" { resetBuildNumber() }
             buildNumber.append(button)
             resultsLabel.text = buildNumber
         }
     }
     
     func performCalculation() {
-        
-        // need to add error checking if you click number and then = and another number.  also if you click number and then =
-        var calOperator : [String] = []
+        var calOperator = ""
         var numbers : [Int] = []
+        //seperates out our math problem into the arrays above
         for item in mathProblem{
-            if item == "+" {
-                calOperator.append("+")
+            if let value = Int(item){
+                numbers.append(value)
             } else {
-                if let value = Int(item){
-                    numbers.append(value)
-                }
+                calOperator = item
             }
-            
-            for i in numbers{
-                
-            }
-            //Need to set build number to calculated value
-            
-            print("operator: \(calOperator.count)")
-            print("numbers: \(numbers.count)")
         }
+        
+        //If we have enough numbers then perform math.
+        if numbers.count > 1{
+            switch calOperator {
+            case "+":
+                result = numbers[0] + numbers[1]
+            case "-":
+                result = numbers[0] - numbers[1]
+            case "X":
+                result = numbers[0] * numbers[1]
+            case "division":
+                result = numbers[0] / numbers[1]
+            default:
+                print("need another number")
+            }
+        }
+        
+        resultsLabel.text = "\(result)"
+        //resetting the math problem to only have 1 item in array with that number being the result
+        mathProblem = ["\(result)"]
     }
     
+    //resets the number created in the calculator or if an operator button was seletect back to blank
     func resetBuildNumber(){
         buildNumber = ""
+    }
+    //reset the build number to 0
+    func zeroOutBuildNumber(){
+        buildNumber = "0"
+    }
+
+    func evaluateMath(){
+        // using if statement to only append values that are not blank or no value.
+        if buildNumber != ""{ mathProblem.append(buildNumber) }
+        // 2 numbers and 1 operator
+        if mathProblem.count == 3 { performCalculation() }
     }
 }
 extension ViewController{
@@ -104,17 +139,14 @@ extension ViewController{
         case 1:
             updateResults("+")
         case 2:
-            print("-")
+            updateResults("-")
         case 3:
-            print("X")
+            updateResults("X")
         case 4:
-            print("division")
+            updateResults("division")
         default:
             updateResults("=")
             print(mathProblem)
-//            if let number = Int(buildNumber){
-//                print(number + 100) 
-//            }
             
         }
     }
