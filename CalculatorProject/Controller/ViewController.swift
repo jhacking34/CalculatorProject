@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var result = 0
+    var result : Double = 0
     var buildNumber = "0"
     var mathProblem : [String] = []
     //use an array to store all values that will go through to do all the math.
@@ -61,10 +61,10 @@ class ViewController: UIViewController {
     
     func performCalculation() {
         var calOperator = ""
-        var numbers : [Int] = []
+        var numbers : [Double] = []
         //seperates out our math problem into the arrays above
         for item in mathProblem{
-            if let value = Int(item){
+            if let value = Double(item){
                 numbers.append(value)
             } else {
                 calOperator = item
@@ -165,7 +165,7 @@ extension ViewController{
         case 3:
             updateResults("AC")
         default:
-            print(".")
+            updateResults(".")
         }
     }
 
