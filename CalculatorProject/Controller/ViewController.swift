@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.4535933514)
         
     }
+    
+    //MARK: - Functions
     func updateResults(_ button: String) {
         
         switch button {
@@ -109,6 +111,7 @@ class ViewController: UIViewController {
 extension ViewController{
     //MARK: - Number Button Pressed
     @IBAction func numButtonPressed(_ sender: UIButton){
+        // I used the tags for each button.
         switch sender.tag {
         case 1:
             updateResults("1")
